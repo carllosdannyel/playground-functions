@@ -5,7 +5,9 @@ function compareTrue(bool1, bool2) {
 }
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
+  let area = (base * height) / 2;
+  return area;
 }
 
 // Desafio 3
@@ -63,4 +65,4 @@ module.exports = {
   highestCount,
   splitSentence,
   techList,
-};
+}
