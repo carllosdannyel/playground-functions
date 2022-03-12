@@ -39,14 +39,14 @@ function highestCount(arrayOfNumber) {
   let repeated = arrayOfNumber[0];
   let counter = 0;
 
-// encontra o maior valor que se repete reatribuindo cada novo maior valor a variavel repeat
+  // encontra o maior valor que se repete reatribuindo cada novo maior valor a variavel repeat
   for (let index = 1; index < arrayOfNumber.length; index += 1) {
     if (arrayOfNumber[index] > repeated) {
       repeated = arrayOfNumber[index];
     }
   }
 
-// verifica a quantidade de vezes que o maior valor aparece e atribuuindo mais um ao counter caso o encontre
+  // verifica a quantidade de vezes que o maior valor aparece e atribuuindo mais um ao counter caso o encontre
   for (let index2 = 0; index2 < arrayOfNumber.length; index2 += 1) {
     if (arrayOfNumber[index2] === repeated) {
       counter += 1;
@@ -57,9 +57,9 @@ function highestCount(arrayOfNumber) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-// Referencias => https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
+  // Referencias => https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
 
-// A função Math.abs(x) retorna o valor absoluto de um número "x"
+  // A função Math.abs(x) retorna o valor absoluto de um número "x"
   let posicaoDoGato1 = Math.abs(mouse - cat1);
   let posicaoDoGato2 = Math.abs(mouse - cat2);
   if (posicaoDoGato1 > posicaoDoGato2) {
@@ -67,20 +67,20 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if (posicaoDoGato1 < posicaoDoGato2) {
     return 'cat1';
   } else {
-    return 'os gatos trombam e o rato foge'
+    return 'os gatos trombam e o rato foge';
   }
 }
 // Desafio 8
 function fizzBuzz(lista) {
   for (let index = 0; index < lista.length; index += 1) {
     if (lista[index] % 3 === 0 && lista[index] % 5 !== 0) {
-      lista[index] = "fizz";
+      lista[index] = 'fizz';
     } else if (lista[index] % 5 === 0 && lista[index] % 3 !== 0) {
-      lista[index] = "buzz";
+      lista[index] = 'buzz';
     } else if (lista[index] % 3 === 0 && lista[index] % 5 === 0) {
-      lista[index] = "fizzBuzz"
+      lista[index] = 'fizzBuzz';
     } else {
-      lista[index] = "bug!"
+      lista[index] = 'bug!';
     }
   }
   return lista;
@@ -88,11 +88,26 @@ function fizzBuzz(lista) {
 // console.log(fizzBuzz([3, 15, 17, 25, 9]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(codificados) {
+  // referencia: https://ideone.com/lC3XUo
+  let codificado = { a: '1', e: '2', i: '3', o: '4', u: '5' };
+  let resultado = '';
+  for (let index = 0; index < codificados.length; index += 1) {
+    let caracteres = codificados[index];
+    resultado += codificado[caracteres] || caracteres;
+  }
+  return resultado;
 }
-function decode() {
-  // seu código aqui
+// console.log(encode('carlos daniel jovelino pereira dos santos'))
+
+function decode(descodificados) {
+  let descodificado = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
+  let resultado = '';
+  for (let index = 0; index < descodificados.length; index += 1) {
+    let caracteres = descodificados[index];
+    resultado += descodificado[caracteres] || caracteres;
+  }
+  return resultado;
 }
 
 // Desafio 10
