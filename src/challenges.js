@@ -12,31 +12,47 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(palavras) {
-  let resultado = palavras.split(" ");
+  let resultado = palavras.split(' ');
   return resultado;
 }
 
 // Desafio 4
 function concatName(concatenacao) {
-  let ultimoNome = concatenacao[concatenacao.length -1];
+  let ultimoNome = concatenacao[concatenacao.length - 1];
   let primeiroNome = concatenacao[0];
   let juncao = ultimoNome + ', ' + primeiroNome;
-    return juncao;
+  return juncao;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let pontosTotais = 0
-  let partida = ties
+  let pontosTotais = 0;
+  let partida = ties;
   if (partida > 1) {
     pontosTotais = wins * 3;
   }
-  return pontosTotais + ties;
+  return pontosTotais + partida;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arrayOfNumber) {
+  let repeated = arrayOfNumber[0];
+  let counter = 0;
+
+// encontra o maior valor que se repete reatribuindo cada novo maior valor a variavel repeat
+  for (let index = 1; index < arrayOfNumber.length; index += 1) {
+    if (arrayOfNumber[index] > repeated) {
+      repeated = arrayOfNumber[index];
+    }
+  }
+
+// verifica a quantidade de vezes que o maior valor aparece e atribuuindo mais um ao counter caso o encontre
+  for (let index2 = 0; index2 < arrayOfNumber.length; index2 += 1) {
+    if (arrayOfNumber[index2] === repeated) {
+      counter += 1;
+    }
+  }
+  return counter;
 }
 
 // Desafio 7
@@ -74,4 +90,4 @@ module.exports = {
   highestCount,
   splitSentence,
   techList,
-}
+};
