@@ -56,10 +56,20 @@ function highestCount(arrayOfNumber) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
-}
+function catAndMouse(mouse, cat1, cat2) {
+// Referencias => https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
 
+// A função Math.abs(x) retorna o valor absoluto de um número "x"
+  let posicaoDoGato1 = Math.abs(mouse - cat1);
+  let posicaoDoGato2 = Math.abs(mouse - cat2);
+  if (posicaoDoGato1 > posicaoDoGato2) {
+    return 'cat2';
+  } else if (posicaoDoGato1 < posicaoDoGato2) {
+    return 'cat1';
+  } else {
+    return 'os gatos trombam e o rato foge'
+  }
+}
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
