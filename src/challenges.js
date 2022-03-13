@@ -111,9 +111,26 @@ function decode(descodificados) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tecnology, name) {
+  let listaDeTecnologias = [];
+  tecnology.sort();
+  for (let index = 0; index < tecnology.length; index += 1) {
+    let tecnologia = {
+      tech: '',
+      name: '',
+    };
+     if (listaDeTecnologias !== 0) {
+    tecnologia.tech = tecnology[index];
+    tecnologia.name = name;
+    listaDeTecnologias.push(tecnologia);
+    }
+  }
+  if (listaDeTecnologias.length === 0) {
+    return 'Vazio!'
+  }
+  return listaDeTecnologias;
 }
+console.log(techList(['HTML', 'CSS', 'PHP'], 'lucas'));
 
 module.exports = {
   calcArea,
