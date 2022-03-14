@@ -130,7 +130,7 @@ function techList(tecnology, name) {
   }
   return listaDeTecnologias;
 }
-console.log(techList(['HTML', 'CSS', 'PHP'], 'lucas'));
+// console.log(techList(['HTML', 'CSS', 'PHP'], 'lucas'));
 
 module.exports = {
   calcArea,
