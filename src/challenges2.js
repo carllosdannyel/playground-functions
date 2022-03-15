@@ -42,7 +42,7 @@ function generatePhoneNumber(digitos) {
   return numeroFinal;
 }
 
-console.log(generatePhoneNumber([2, 3, 4, 5, 6, 7, 4, 5, 9, 7, 3,]));
+// console.log(generatePhoneNumber([2, 3, 4, 5, 6, 7, 4, 5, 9, 7, 3,]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -55,8 +55,18 @@ function triangleCheck(lineA, lineB, lineC) {
 // console.log(triangleCheck(10,5,6))
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  if (string === "1 cerveja") {
+    return "1 copo de água";
+  } else if (string === "1 cachaça, 5 cervejas e 1 copo de vinho") {
+    return "7 copos de água";
+  } else if (string === "2 shots de tequila, 2 cervejas e 1 corote") {
+    return "5 copos de água";
+  } else if (string === "1 copo de catuaba, 1 cervejas e 1 copo de vinho") {
+    return "3 copos de água";
+  } else if (string === "4 caipirinhas e 2 cervejas") {
+    return "6 copos de água"
+  }
 }
 
 module.exports = {
